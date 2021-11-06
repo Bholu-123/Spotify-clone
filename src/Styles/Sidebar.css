@@ -1,0 +1,61 @@
+.sidebar{
+    height: 100vh;
+    position: absolute;
+    left: 0%;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px; 
+    min-width: 200px;
+    width: 15%;
+    background-color: hsl(0, 0%, 2%);
+    overflow-y: overlay;
+}
+
+.sidebar-logo {
+    margin-right: auto;
+    object-fit: contain;
+    height: 70px;
+    padding: 10px;
+}
+
+.sidebar-title{
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.sidebar > hr {
+    border: .5px solid #282828;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.sidebar-playlist::-webkit-scrollbar{
+    width: 10px;
+    color: gray;
+}
+.sidebar-playlist > p{
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px; 
+    cursor: pointer;
+    overflow-y: overlay;
+}
+
+.fnsIcon{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    height: 40px;
+    color: grey;
+    transition: 200ms color ease-in;
+}
+
+.fnsIcon:hover{
+    color: white;
+}
+
+.fnsIcon .icon{
+    padding-left: 10px;
+    padding-right: 10px;
+}

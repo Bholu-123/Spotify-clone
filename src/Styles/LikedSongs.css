@@ -1,0 +1,86 @@
+.liked-songs{
+    overflow-y: overlay;
+    color: white;
+    padding: 30px;
+    height: 85vh;
+    margin-left: 15%;
+    width: 100%;
+    background: linear-gradient( rgb(80, 62, 180), rgba(0,0,0,1));
+}
+
+.liked-songs-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.liked-songs-infoText {
+    padding: 10px;
+    flex: 1;
+    margin-top: 5%;
+}
+
+.liked-songs-infoText>h2{
+    font-size:100px;
+}
+
+.body-songs > hr {
+    margin: 10px 30px;
+    border: 1px solid rgba(36, 36, 49, 0.75);
+}
+
+.liked-songs-songsHeader {
+    display: flex;
+    list-style: none;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 5px 0;
+    width: 95.75%;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(71,81,97, 0.5);
+}
+
+.liked-songs-songsNumber > p {
+    font-size: 14px;
+    text-align: center;
+    width: fit-content;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.liked-songs-songsTitle > p {
+    font-size: 14px;
+    width: fit-content;
+    margin-left: 30px;
+    margin-right: 510px;
+    margin-top: 15px;
+}
+
+.liked-songs-songsAlbum > p {
+    font-size: 14px;
+    width: fit-content;
+    float: left;
+    margin-left: 30px;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+
+.liked-songs-songsRelease > p {
+    margin-left: 150px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.liked-songs-songsDurationIcon {
+  margin-left: 14.75%;
+  margin-top: 30px;
+  height: fit-content; 
+  width: fit-content;
+}
+
+.liked-songs-duration {
+    font-size: 20px !important;
+    padding: 0;
+    margin: 0;
+}
+

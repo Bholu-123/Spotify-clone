@@ -1,0 +1,10 @@
+.search-results{
+    overflow-y: overlay;
+    color: white;
+    padding: 30px;
+    height: 85vh;
+    margin-left: 15%;
+    width: 100%;
+    background: linear-gradient( rgb(71, 28, 64), rgba(0,0,0,1));
+}
+
