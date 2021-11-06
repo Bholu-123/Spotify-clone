@@ -100,26 +100,26 @@ const Sidebar = () => {
         src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
         alt="Spotify-Img"
       /> 
-        <SidebarOption Icon={HomeIcon} option="Home"/>
-        <SidebarOption Icon={SearchIcon} option="Search"/>
-        <SidebarOption Icon={LibraryMusicIcon} option="Library"/>
-        <br/>
-        <div className="fnsIcon" onClick={createPlaylist}>
-          <AddBoxIcon className="icon"/>
-          <span>Create PLaylist</span>
-        </div>
-        <div className="fnsIcon" onClick={getFavSongs}>
-          <FavoriteIcon className="icon"/>
-          <span>Liked Songs</span>
-        </div>
-        <br/>
-        <strong className="sidebar-title">PLAYLISTS</strong>
-        <hr />
-        <div className="sidebar-playlist">
-          {playlists?.items?.map((playlist) => (
-            <p onClick={() => showPlaylist(playlist.id)}>{playlist.name}</p>
-          ))}
-        </div>
+      <SidebarOption Icon={HomeIcon} option="Home"/>
+      <SidebarOption Icon={SearchIcon} option="Search"/>
+      <SidebarOption Icon={LibraryMusicIcon} option="Library"/>
+      <br/>
+      <div className="fnsIcon" onClick={createPlaylist}>
+        <AddBoxIcon className="icon"/>
+        <span>Create PLaylist</span>
+      </div>
+      <div className="fnsIcon" onClick={getFavSongs}>
+        <FavoriteIcon className="icon"/>
+        <span>Liked Songs</span>
+      </div>
+      <br/>
+      <strong className="sidebar-title">PLAYLISTS</strong>
+      <hr />
+      <div className="sidebar-playlist">
+        {playlists?.items?.map((playlist) => (
+          <p onClick={() => showPlaylist(playlist.id)}>{playlist.name}</p>
+        ))}
+      </div>
     </div>
   )
 }
