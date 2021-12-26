@@ -4,83 +4,89 @@ export const initialState = {
   spotify: null,
   discoverPlaylist: null,
   item: null,
-  token:null,
+  token: null,
   searchResults: null,
   likedSongs: null,
-  playlistNumbr:1,
+  playlistNumbr: 1,
   reccomendedSongs: null,
+  songUri: null,
 };
 
-const reducer = (state,action) =>{
-  switch(action.type){
+const reducer = (state, action) => {
+  switch (action.type) {
     case "SET_TOKEN":
-      return{
-          ...state,
-          token: action.token,
+      return {
+        ...state,
+        token: action.token,
       };
 
     case "SET_USER":
-      return{
-          ...state,
-          user: action.user,
+      return {
+        ...state,
+        user: action.user,
       };
-      
+
     case "SET_SPOTIFY":
-      return{
+      return {
         ...state,
         spotify: action.spotify,
-      }
-      
+      };
+
     case "SET_PLAYLIST":
-      return{
-          ...state,
-          playlists:action.playlists
-      }
-      
+      return {
+        ...state,
+        playlists: action.playlists,
+      };
+
     case "SET_DISCOVER_PLAYLIST":
-      return{
+      return {
         ...state,
         discoverPlaylist: action.discoverPlaylist,
-      }
+      };
 
     case "SET_ITEM":
-      return{
+      return {
         ...state,
         item: action.item,
-      }
+      };
 
     case "SET_PLAYING":
-      return{
+      return {
         ...state,
         playing: action.playing,
-      }
+      };
 
     case "SET_SEARCH_RESULTS":
-      return{
+      return {
         ...state,
         searchResults: action.searchResults,
-      }
+      };
 
     case "SET_LIKED_SONGS":
-      return{
+      return {
         ...state,
         likedSongs: action.likedSongs,
-      }
+      };
 
     case "SET_PLAYLIST_NUMBR":
-      return{
+      return {
         ...state,
         playlistNumbr: action.playlistNumbr,
-      }
+      };
     case "SET_RECCOMENDED_SONGS":
       return {
         ...state,
         reccomendedSongs: action.reccomendedSongs,
-      }
-      
+      };
+    case "SET_URI":
+      return {
+        ...state,
+        songUri: action.songUri,
+      };
+
     default:
-      return state; 
+      return state;
   }
-}
+};
 
 export default reducer;

@@ -1,11 +1,51 @@
-.footer{
-   position:fixed;
-   bottom: 0;
-   height: 60px;
-   width: 98%;
-   background-color: #282828;
-   padding: 15px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+.PlayerRSWP {
+  position: fixed;
+  bottom: 0px;
+  padding: 15px;
+  padding-top: 0px !important;
+  padding-bottom: 30px !important;
+  min-height: max-content !important;
+  width: 85vw;
+  margin-left: 16%;
+  background-color: black !important;
+  color: #fff !important;
+}
+
+._ContentRSWP {
+  margin-top: 3px !important;
+}
+
+._ControlsRSWP {
+  padding-top: 0px !important;
+}
+
+.__nnvdcq {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 35px;
+}
+.__nnvdcq a {
+  text-decoration: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #fff !important;
+  font-size: 15px !important;
+}
+
+.__nnvdcq p:first-child a {
+  margin-bottom: 3px !important;
+  min-width: max-content;
+  font-size: 20px !important;
+}
+
+.__nnvdcq p:last-child a {
+  font-size: 15px !important;
+  color: gray !important;
+}
+
+.__nnvdcq p {
+  font-size: 15px !important;
+  padding: 0px !important;
 }

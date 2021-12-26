@@ -1,0 +1,86 @@
+.search-results-songNumber {
+  counter-reset: list-number;
+}
+.search-results-songNumber .SearchSongRow {
+  counter-increment: list-number;
+}
+
+.search-results-songNumber .SearchSongRow:before {
+  content: counter(list-number);
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Song Row Container */
+
+.SearchSongRow {
+  margin-right: 30px;
+  margin-left: 20px;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: 90%;
+  overflow: hidden;
+  content: counter(list-number);
+}
+
+.SearchSongRow:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.8;
+}
+
+.SearchSongRow .SearchSongRow-title {
+  display: flex;
+  align-items: center;
+}
+
+.SearchSongRow .SearchSongRow-titleImg {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.SearchSongRow .SearchSongRow-titleContent {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.SearchSongRow-titleContent .track-name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.SearchSongRow-artistName {
+  color: #b3b3b3;
+}
+.SearchSongRow-albumName {
+  margin-left: 200px;
+  float: left;
+  min-width: 200px;
+  overflow: hidden;
+  width: 30px;
+  height: 40px;
+  color: #b3b3b3;
+}
+
+.SearchSongRow-albumRelease {
+  margin-left: 200px;
+  width: 180px;
+  float: left;
+  color: #b3b3b3;
+}
+
+.SearchSongRow-infoDuration {
+  margin-left: 30px;
+  color: #b3b3b3;
+  width: 50px;
+  float: left;
+}

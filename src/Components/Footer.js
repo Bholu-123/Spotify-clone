@@ -1,42 +1,26 @@
-import React from 'react'
-import '../Styles/Footer.css';
+import { useState, useEffect } from "react";
+import SpotifyPlayer from "react-spotify-web-playback";
+import "../Styles/Footer.css";
 import { useStateValue } from "../Context/StateProvider";
 
-const Footer = () => {
+export default function Footer() {
+  const [{ songUri, token }, dispatch] = useStateValue();
+  const [play, setPlay] = useState(false);
 
-    const [{item,playing},dispatch] = useStateValue();
-    console.log(item);
+  useEffect(() => setPlay(true), [songUri]);
 
-    return (
-        <div className="footer">
-            {/* <div className="footer-left">
-               <img
-                 className="footer__albumLogo"
-                 src={song?.album.images[0].url}
-                 alt={song?.name}
-               />
-                {song ? (
-                  <div className="footer__songInfo">
-                     <h4>{song.name}</h4>
-                     <p>{song.artists.map((artist) => artist.name).join(", ")}</p>
-                  </div>
-                ) : (
-                  <div className="footer__songInfo">
-                     <h4>No song is playing</h4>
-                     <p>...</p>
-                  </div>
-                )}
-            </div> */}
-
-            <div className="footer-center">
-               center
-            </div>
-
-            <div className="footer-right">
-               right
-            </div>
-        </div>
-    )
+  if (!token) return null;
+  return (
+    <SpotifyPlayer
+      token={token}
+      callback={(state) => {
+        if (!state.isPlaying) setPlay(false);
+      }}
+      play={play}
+      initialVolume={0.5}
+      showSaveIcon={true}
+      autoPlay={false}
+      uris={songUri ? [songUri] : []}
+    />
+  );
 }
-
-export default Footer

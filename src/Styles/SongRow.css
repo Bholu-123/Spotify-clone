@@ -1,83 +1,147 @@
 .body-songNumber {
-    counter-reset: list-number;
+  counter-reset: list-number;
 }
 .body-songNumber .songRow {
-    counter-increment: list-number;
+  counter-increment: list-number;
 }
+
 .body-songNumber .songRow:before {
-    content: counter(list-number);
-    margin-right: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+  content: counter(list-number);
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Song Row Container */
-.songRow {
-    margin-right: 30px;
-    margin-left: 20px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    color: white;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    content: counter(list-number);
+/* .songRow {
+  margin-right: 30px;
+  margin-left: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: 80%;
+  content: counter(list-number);
 }
 
 .songRow:hover {
-    cursor: pointer;
-    background-color: rgb(0, 0, 0);
-    opacity: 0.8;
-    
-}
-
-.songRow-info {
-    width: 100%;
-    margin-left: 20px;
-    height: 60px;
-    Overflow: hidden;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.8;
 }
 
 .songRow-info > h1 {
-    font-size: 16px;
-    width: 30%;
+  font-size: 16px;
+  width: 30%;
 }
 
 .songRow-info > p {
-    font-size: 14px;
-    padding-top: 3px;
-    margin-right: 27%;
-    color: #b3b3b3;
-    width: 20%;
-    float: left;
+  font-size: 14px;
+  padding-top: 3px;
+  margin-right: 12%;
+  color: #b3b3b3;
+  width: 20%;
+  float: left;
 }
 
 /* Song Album */
-.songRow-album {
-    height: 40px;
-    width: 40px;
+/* .songRow-album {
+  height: 40px;
+  width: 40px;
 }
 .songRow-albumName {
-    margin-top: -5px !important;
-    width: 10% !important;
-    align-items: center;
-    font-size: 14px;
-    display: flex;
-    margin-right: 0 !important;
+  margin-top: -5px !important;
+  width: 10% !important;
+  align-items: center;
+  font-size: 14px;
+  display: flex;
+  margin-right: 0 !important;
 }
 
 .songRow-albumRelease {
-    width: fit-content !important;
-    padding: 0;
-    margin-top: -5px;
-    margin-left: 14%;
-    margin-right: 0 !important;
+  width: fit-content !important;
+  padding: 0;
+  margin-top: -5px;
+  margin-left: 10%;
+  margin-right: 0 !important;
 }
 
 .songRow-infoDuration {
-    width: fit-content;
-    margin-top: -3px !important;
-    margin-left: 14.75% !important;
-    align-items: center;
-    color: #b3b3b3;
+  width: fit-content;
+  margin-top: -3px !important;
+  margin-left: 14.75% !important;
+  align-items: center;
+  color: #b3b3b3;
+} */
+
+.songRow {
+  margin-right: 30px;
+  margin-left: 20px;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: 90%;
+  overflow: hidden;
+  content: counter(list-number);
+}
+
+.songRow:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.8;
+}
+
+.songRow .songRow-title {
+  display: flex;
+  align-items: center;
+}
+
+.songRow .songRow-titleImg {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.songRow .songRow-titleContent {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.songRow-titleContent .track-name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.songRow-artistName {
+  color: #b3b3b3;
+}
+.songRow-albumName {
+  margin-left: 200px;
+  float: left;
+  min-width: 300px;
+  height: 40px;
+  color: #b3b3b3;
+  overflow: hidden;
+}
+
+.songRow-albumRelease {
+  margin-left: 200px;
+  width: 200px;
+  float: left;
+  color: #b3b3b3;
+}
+
+.songRow-infoDuration {
+  margin-left: 30px;
+  color: #b3b3b3;
+  width: 50px;
+  float: left;
 }

@@ -1,10 +1,181 @@
-.search-results{
-    overflow-y: overlay;
-    color: white;
-    padding: 30px;
-    height: 85vh;
-    margin-left: 15%;
-    width: 100%;
-    background: linear-gradient( rgb(71, 28, 64), rgba(0,0,0,1));
+.search-results {
+  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-y: overlay;
+  padding-bottom: 3rem;
+  color: white;
+  padding: 30px;
+  height: 80vh;
+  margin-left: 15%;
+  width: 81vw;
+  background: linear-gradient(rgb(71, 28, 64), rgba(0, 0, 0, 1));
 }
 
+a {
+  margin-top: 10px;
+  margin-right: 5px;
+  padding-top: 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  padding-top: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.search-results::-webkit-scrollbar {
+  width: 3px;
+}
+
+.search-results::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.search-results-info {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.search-results-infoText > span {
+  margin-left: 5px !important;
+}
+
+.search-results-infoText {
+  flex: 1;
+  margin-top: 10%;
+}
+
+.search-results-infoText > h2 {
+  font-size: 70px;
+  margin-bottom: 0px;
+}
+
+.search-results-infoText > p {
+  font-size: 16px;
+}
+
+.search-results-info > img {
+  height: 20vw;
+  margin: 0 20px;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+.search-results-infoText > strong {
+  font-size: 14px;
+}
+
+.search-results-icons {
+  display: flex;
+  align-items: center;
+}
+
+.search-results-icons > .MuiSvgIcon-root {
+  margin-right: 20px;
+}
+
+.search-results-shuffle {
+  font-size: 80px !important;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-results-shuffle:hover {
+  transition: 0.1s transform ease-in;
+  transform: scale(1.08);
+}
+
+.search-results-songs {
+  margin: 20px -30px 10px -30px;
+}
+
+.search-results-songs > ol {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid red;
+}
+
+.search-results-songs > hr {
+  margin: 10px 30px;
+  border: 1px solid rgba(56, 56, 61, 0.75);
+}
+
+.search-results-songsHeader {
+  display: flex;
+  list-style: none;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding: 5px 0;
+  width: 95.75%;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(71, 81, 97, 0.5);
+}
+
+.search-results-songsNumber > p {
+  font-size: 14px;
+  text-align: center;
+  width: fit-content;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.search-results-songsTitle > p {
+  font-size: 14px;
+  width: fit-content;
+  margin-left: 30px;
+  margin-right: 320px;
+  margin-top: 15px;
+}
+
+.search-results-songsAlbum > p {
+  font-size: 14px;
+  width: fit-content;
+  float: left;
+  margin-left: 30px;
+  margin-right: 50px;
+  margin-top: 15px;
+}
+
+.search-results-songsRelease > p {
+  margin-left: 300px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+.search-results-songsDurationIcon {
+  margin-left: 155px;
+  margin-top: 30px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.search-results-duration {
+  font-size: 20px !important;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-green {
+  color: #1ed15e;
+}
+
+#discover-profileImage {
+  pointer-events: none;
+}

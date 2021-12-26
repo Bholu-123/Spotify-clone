@@ -1,9 +1,9 @@
 import React from "react";
-import "../Styles/SongRow.css";
-import "../Styles/Body.css";
+import "../Styles/LikedSongRow.css";
+import "../Styles/LikedSongs.css";
 import { useStateValue } from "../Context/StateProvider";
 
-const SongRow = ({ track, duration }) => {
+const LikedSongRow = ({ track, duration }) => {
   const [{}, dispatch] = useStateValue();
   // Song Duration
   var minutes = Math.floor(track.duration_ms / 60000);
@@ -18,25 +18,27 @@ const SongRow = ({ track, duration }) => {
   };
 
   return (
-    <div className="songRow" onClick={() => PlaySong(track.uri)}>
-      <div className="songRow-title">
+    <div className="LikedSongRow" onClick={() => PlaySong(track.uri)}>
+      <div className="LikedSongRow-title">
         <img
-          className="songRow-titleImg"
+          className="LikedSongRow-titleImg"
           src={track.album.images[0].url}
           alt=""
         />
-        <div className="songRow-titleContent">
+        <div className="LikedSongRow-titleContent">
           <span className="track-name">{track.name}</span>
-          <span className="songRow-artistName">
+          <span className="LikedSongRow-artistName">
             {track.artists.map((artist) => artist.name).join(", ")}
           </span>
         </div>
       </div>
-      <span className="songRow-albumName">{track.album.name}</span>
-      <span className="songRow-albumRelease">{track.album.release_date}</span>
-      <span className="songRow-infoDuration">{trackTime}</span>
+      <span className="LikedSongRow-albumName">{track.album.name}</span>
+      <span className="LikedSongRow-albumRelease">
+        {track.album.release_date}
+      </span>
+      <span className="LikedSongRow-infoDuration">{trackTime}</span>
     </div>
   );
 };
 
-export default SongRow;
+export default LikedSongRow;

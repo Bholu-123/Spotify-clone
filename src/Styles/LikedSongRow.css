@@ -1,0 +1,86 @@
+.liked-songs-songNumber {
+  counter-reset: list-number;
+}
+.liked-songs-songNumber .LikedSongRow {
+  counter-increment: list-number;
+}
+
+.liked-songs-songNumber .LikedSongRow:before {
+  content: counter(list-number);
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Song Row Container */
+
+.LikedSongRow {
+  margin-right: 30px;
+  margin-left: 20px;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: 90%;
+  overflow: hidden;
+  content: counter(list-number);
+}
+
+.LikedSongRow:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.8;
+}
+
+.LikedSongRow .LikedSongRow-title {
+  display: flex;
+  align-items: center;
+}
+
+.LikedSongRow .LikedSongRow-titleImg {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.LikedSongRow .LikedSongRow-titleContent {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.LikedSongRow-titleContent .track-name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.LikedSongRow-artistName {
+  color: #b3b3b3;
+}
+.LikedSongRow-albumName {
+  margin-left: 200px;
+  float: left;
+  min-width: 200px;
+  overflow: hidden;
+  width: 30px;
+  height: 40px;
+  color: #b3b3b3;
+}
+
+.LikedSongRow-albumRelease {
+  margin-left: 200px;
+  width: 180px;
+  float: left;
+  color: #b3b3b3;
+}
+
+.LikedSongRow-infoDuration {
+  margin-left: 30px;
+  color: #b3b3b3;
+  width: 50px;
+  float: left;
+}
